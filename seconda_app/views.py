@@ -8,3 +8,11 @@ def es_if(request):
         'var3':300
     }
     return render(request, "es_if.html", context)
+
+def if_elif_else(request):
+    context={
+        'var1':100,
+        'var2':100.0,
+        'var3':100.50,
+    }
+    return render(request, "if_elif_else.html", context)
