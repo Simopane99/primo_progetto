@@ -21,6 +21,5 @@ from .views import index_root
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_root,name="index_root"),
-    
     path('prima_app/', include("prima_app.urls", namespace="prima_app")),
 ]
