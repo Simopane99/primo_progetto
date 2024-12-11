@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi siamo</title>
-</head>
-<body>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla risus diam, a aliquam mi pellentesque nec. Morbi quis elit vitae mi malesuada euismod nec et lacus. Pellentesque a luctus urna, quis lacinia orci. Phasellus consectetur malesuada massa, ut consectetur ipsum tristique vel. Quisque condimentum eu dolor non placerat. Duis ac lectus nulla. Suspendisse venenatis mollis metus, vel malesuada neque volutpat at. Sed efficitur ornare tincidunt. Pellentesque sit amet volutpat elit, sed consectetur mauris. Aliquam egestas a sem sit amet pharetra. Cras a sem lacinia, dignissim sem in, commodo nulla. Vivamus aliquet metus auctor lacus venenatis, quis venenatis nisi molestie. Nam sed sollicitudin urna, id pharetra tellus. Donec laoreet neque interdum, mollis lacus ut, eleifend quam. Maecenas imperdiet consequat ipsum, in tristique ante posuere ac.
-    </p>
-</body>
-</html>
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Chi siamo {%endblock title%}
+
+{%block content%}
+    <h1>Chi siamo</h1>
+    <p>        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla risus diam, a aliquam mi pellentesque nec. Morbi quis elit vitae mi malesuada euismod nec et lacus. Pellentesque a luctus urna, quis lacinia orci. Phasellus consectetur malesuada massa, ut consectetur ipsum tristique vel. Quisque condimentum eu dolor non placerat. Duis ac lectus nulla. Suspendisse venenatis mollis metus, vel malesuada neque volutpat at. Sed efficitur ornare tincidunt. Pellentesque sit amet volutpat elit, sed consectetur mauris. Aliquam egestas a sem sit amet pharetra. Cras a sem lacinia, dignissim sem in, commodo nulla. Vivamus aliquet metus auctor lacus venenatis, quis venenatis nisi molestie. Nam sed sollicitudin urna, id pharetra tellus. Donec laoreet neque interdum, mollis lacus ut, eleifend quam. Maecenas imperdiet consequat ipsum, in tristique ante posuere ac.</p>
+{%endblock content%}

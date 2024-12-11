@@ -19,7 +19,7 @@ def variabili(request):
         'var2':'Seconda variabile',
         'var2':'Terza variabile'
     }
-    return render(request,"variabii.html", context)
+    return render(request,"variabili.html", context)
 
 def index(request):
     return render(request,"index.html")
