@@ -31,3 +31,15 @@ def articoloDetailView(request,pk):
 
 def index_news(request):
     return render(request,"index_news.html")
+
+def listaArticoli(request, pk=None):
+    if(pk==None):
+        articoli=Articolo.objects.all() 
+    
+    else:
+        articoli=Articolo.objects.filter(giornalista_id=pk) #filtra solo chi possiede l'id ugaule a 1
+    print(articoli)
+    context={
+        'articoli':articoli,
+    }
+    return render(request,'lista_articoli.html', context)
