@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+    Query base
+{% endblock title %}
+{% block content %}
+    {% foreach context as elem%}
+        <h4>{{elem}}</h4>
+    {% endfor %}
+{% endblock content %}
