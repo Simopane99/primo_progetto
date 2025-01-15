@@ -51,7 +51,7 @@ def queryBase(request):
     #2. totale
     numero_totale_articoli=Articolo.objects.count()
     #3. Contare il numero di articoli scritti da un giornalista specifico:
-    giornalista_1=Giornalista.objects.get(id=1)
+    giornalista_1=Giornalista.objects.get(id=2)
     numero_articoli_giornalista_1=Articolo.objects.filter(giornalista=giornalista_1).count()
     #4. Ordinare gli articoli per numero di visualizzazioni in ordine decrescente:
     articoli_ordinati=Articolo.objects.order_by('-visualizzazioni')
@@ -95,4 +95,6 @@ def queryBase(request):
         'ultimi': ultimi,
         'articoli_minime_visualizzazioni': articoli_minime_visualizzazioni,
         'articoli_parola': articoli_parola,
+        
     }
+    return render(request,'query.html', context)

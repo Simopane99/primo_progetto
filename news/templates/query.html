@@ -3,7 +3,49 @@
     Query base
 {% endblock title %}
 {% block content %}
-    {% foreach context as elem%}
-        <h4>{{elem}}</h4>
-    {% endfor %}
+    <h4>1. Articoli scritti da un certo autore</h4>
+    <p>{{articoli_cognome}}</p>
+    <br>
+    <h4>2. Totale</h4>
+    <p>{{numero_totale_articoli}}</p>
+    <br>
+    <h4>3. Totlale articoli scritti da un certo autore</h4>
+    <p>{{numero_articoli_giornalista_1}}</p>
+    <br>
+    <h4>4. Articoli ordinati per numero di visualizzazioni</h4>
+    <p>{{articoli_ordinati}}</p>
+    <br>
+    <h4>5. Articoli senza visualizzazioni</h4>
+    <p>{{articoli_senza_visualizzazioni}}</p>
+    <br>
+    <h4>6. Articolo più visualizzato</h4>
+    <p>{{articolo_piu_visualizzato}}</p>
+    <br>
+    <h4>7. Giornalisti nati dopo una certa data</h4>
+    <p>{{giornalisti_data}}</p>
+    <br>
+    <h4>8. Articoli pubblicati in una data specifica</h4>
+    <p>{{articoli_del_giorno}}</p>
+    <br>
+    <h4>9. Articoli pubblicati in un certo periodo</h4>
+    <p>{{articoli_periodo}}</p>
+    <br>
+    <h4>10. Articoli scritti da giornalisti nati prima del 1980</h4>
+    <p>{{articoli_giornalisti}}</p>
+    <br>
+    <h4>11. Giornalista più giovane</h4>
+    <p>{{giornalista_giovane}}</p>
+    <br>
+    <h4>12. Giornalista più anziano</h4>
+    <p>{{giornalista_anziano}}</p>
+    <br>
+    <h4>13. Utimi 5 articoli pubblicati</h4>
+    <p>{{ultimi}}</p>
+    <br>
+    <h4>14. Articoli con un numero minimo di visualizzazioni</h4>
+    <p>{{articoli_minime_visualizzazioni}}</p>
+    <br>
+    <h4>15. Articoli che contengono una certa parola nel titolo</h4>
+    <p>{{articoli_parola}}</p>
+    <br>
 {% endblock content %}
