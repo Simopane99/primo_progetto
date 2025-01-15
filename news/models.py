@@ -18,7 +18,7 @@ class Articolo(models.Model):
     titolo=models.CharField(max_length=100)#necessita della lunghezza massima 
     contenuto = models.TextField()
     giornalista = models.ForeignKey(Giornalista, on_delete= models.CASCADE, related_name="articoli")
-    data=models.DateField(auto_now=True, blank=True)
+    data=models.DateField(blank=True)
     visualizzazioni=models.IntegerField(default=0,blank=True)
 
     def __str__(self):
