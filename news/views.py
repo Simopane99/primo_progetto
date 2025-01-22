@@ -118,3 +118,11 @@ def queryBase(request):
         'articoli_con_not': articoli_con_not,
     }
     return render(request,'query.html', context)
+
+def giornalistaDetailView(request,pk):
+    #articolo=Articolo.objects.get(pk=pk)
+    giornalista=get_object_or_404(Giornalista, pk=pk)
+    articoli=giornalista.articoli.all()
+    context={"giornalista": giornalista,
+             "articoli":articoli}
+    return render(request, "giornalista_detail.html", context)
