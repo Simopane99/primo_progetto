@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Media studenti {%endblock title%}
+
+{%block content%}
+    <h1>Media Studenti</h1>
+    <ul>
+        {% for studente, media in medie.items %}
+        <li>{{ studente }}: {{ media }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'voti:index_voti' %}">Torna al menu</a>
+{%endblock content%}

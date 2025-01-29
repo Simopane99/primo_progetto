@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | LIsta materie {%endblock title%}
+
+{%block content%}
+    <h1>Lista Materie</h1>
+    <ul>
+        {% for materia in materie %}
+        <li>{{ materia }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'voti:index_voti' %}">Torna al menu</a>
+{%endblock content%}
