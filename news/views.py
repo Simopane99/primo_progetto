@@ -122,5 +122,7 @@ def queryBase(request):
 def giornalistaDetailView(request,pk):
     #articolo=Articolo.objects.get(pk=pk)
     giornalista=get_object_or_404(Giornalista, pk=pk)
-    context={"giornalista": giornalista}
+    articoli=giornalista.articoli.all()
+    context={"giornalista": giornalista,
+             "articoli":articoli}
     return render(request, "giornalista_detail.html", context)
