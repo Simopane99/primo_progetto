@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Voti studenti {%endblock title%}
+
+{%block content%}
+    <h1>Voti Studenti</h1>
+    {% for studente, lista_voti in voti.items() %}
+    <h2>{{ studente }}</h2>
+    <ul>
+        {% for materia, voto, assenze in lista_voti %}
+        <li>{{ materia }}: {{ voto }} (Assenze: {{ assenze }})</li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    <a href="{% url 'voti:index_voti' %}">Torna al menu</a>
+{%endblock content%}

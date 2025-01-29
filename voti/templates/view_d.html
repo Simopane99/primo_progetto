@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Max min voti {%endblock title%}
+
+{%block content%}
+    <h1>Max Min Voti</h1>
+    <p>Voto massimo: {{ max_voto }} (Materie: {{ materie_max }}, Studenti: {{ studenti_max }})</p>
+    <p>Voto minimo: {{ min_voto }} (Materie: {{ materie_min }}, Studenti: {{ studenti_min }})</p>
+    <a href="{% url 'voti:index_voti' %}">Torna al menu</a>
+{%endblock content%}
