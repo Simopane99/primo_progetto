@@ -4,9 +4,9 @@
 {% endblock title %}
 {% block content %}
     {% for articolo in articoli %}
-        <h4><b>Titolo: </b>{{articolo.titolo}}</h4>
+        <h4><b>Titolo: </b><a href="{% url 'news:articolo_detail' articolo.pk %}">{{articolo.titolo}}</a></h4>
         <h4><b>Contenuto: </b>{{articolo.contenuto}}</h4>
-        <h4><b>Autore: </b>{{articolo.giornalista}}</h4>
+        <h4><b>Autore: </b><a href="{% url 'news:giornalista_detail' articolo.giornalista.pk %}">{{articolo.giornalista}}</a></h4>
         <br><br>
     {% endfor %}
 {% endblock content %}
