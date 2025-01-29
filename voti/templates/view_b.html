@@ -4,7 +4,7 @@
 
 {%block content%}
     <h1>Voti Studenti</h1>
-    {% for studente, lista_voti in voti.items() %}
+    {% for studente, lista_voti in voti.items %}
     <h2>{{ studente }}</h2>
     <ul>
         {% for materia, voto, assenze in lista_voti %}
