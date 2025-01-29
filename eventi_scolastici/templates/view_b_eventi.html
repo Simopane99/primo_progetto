@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Dettagli {%endblock title%}
+
+{%block content%}
+    <h3>Dettagli eventi</h1>
+        {% for evento in eventi %}
+            <h6>Titolo: {{ evento.titolo }}</h6>
+            <h6>Data: {{ evento.data }}</h6>
+            <h6>Descrizione: {{ evento.descrizione }}</h6>
+            <h6>Partecipanti: {{ evento.partecipanti }}</h6><br><br>
+        {% endfor %}
+{%endblock content%}

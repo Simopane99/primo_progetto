@@ -1,0 +1,9 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Partecipanti {%endblock title%}
+
+{%block content%}
+    <h3>Partecipanti</h1>
+    <h6>Numero totale di partecipanti: {{ somma }}</h6>
+    <h6>Media partecipanti per evento: {{ media }}</h6>
+{%endblock content%}

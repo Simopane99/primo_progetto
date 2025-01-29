@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Titoli {%endblock title%}
+
+{%block content%}
+    <h1>Titoli in ordine cronologico</h1>
+    <ol>
+        {% for evento in eventi %}
+            <li>{{ evento.titolo }}</li>
+        {% endfor %}
+    </ol>
+{%endblock content%}

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'seconda_app',
     'news',
     'voti',
+    'eventi_scolastici',
 ]
 
 MIDDLEWARE = [

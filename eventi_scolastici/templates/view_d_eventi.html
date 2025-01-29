@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Max Min {%endblock title%}
+
+{%block content%}
+    <h3>Evento con più partecipanti:</h1>
+    <h6>Titolo: {{ piu_partecipanti.titolo }}</h6>
+    <h6>Partecipanti: {{ piu_partecipanti.partecipanti }}</h6><br><br>
+
+    <h3>Evento con meno partecipanti:</h1>
+        <h6>Titolo: {{ meno_partecipanti.titolo }}</h6>
+        <h6>Partecipanti: {{ meno_partecipanti.partecipanti }}</h6>
+{%endblock content%}

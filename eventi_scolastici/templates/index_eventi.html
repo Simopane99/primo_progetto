@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Index eventi {%endblock title%}
+
+{%block content%}
+    <h1>Index Eventi</h1>
+    <ol>
+        <li><a href="{% url 'eventi_scolastici:view_a_eventi'%}">view a</a></li>
+        <li><a href="{% url 'eventi_scolastici:view_b_eventi'%}">view b</a></li>
+        <li><a href="{% url 'eventi_scolastici:view_c_eventi'%}">view c</a></li>
+        <li><a href="{% url 'eventi_scolastici:view_d_eventi'%}">view d</a></li>
+        <li><a href="/">index_root</a></li>
+    </ol>
+{%endblock content%}
