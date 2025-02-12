@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Corsi {%endblock title%}
+
+{%block content%}
+    <h1>Corsi ordinati per data d'inizio</h1>
+    <ol>
+        {% for corso in corsi %}
+            <li><a href="/corsi_formazione/corso/{{corso.pk}}">{{corso.titolo}}</a></li>
+        {% endfor %}
+    </ol>
+{%endblock content%}

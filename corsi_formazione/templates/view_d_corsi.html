@@ -1,0 +1,11 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Corsi {%endblock title%}
+
+{%block content%}
+    <h2>Corsi con meno di 20 partecipanti:</h2><br>
+    {% for corso in meno_posti %}
+        <h3>Titolo:{{corso.titolo}}</h3>
+        <h6>Posti:{{corso.posti_disponibili}}</h6><br><br>
+    {% endfor %}
+{%endblock content%}

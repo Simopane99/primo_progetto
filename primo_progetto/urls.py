@@ -26,4 +26,5 @@ urlpatterns = [
     path('news/', include("news.urls", namespace="news")),
     path('voti/', include("voti.urls", namespace="voti")),
     path('eventi_scolastici/', include("eventi_scolastici.urls", namespace="eventi_scolastici")),
+    path('corsi_formazione/', include("corsi_formazione.urls", namespace="corsi_formazione")),
 ]

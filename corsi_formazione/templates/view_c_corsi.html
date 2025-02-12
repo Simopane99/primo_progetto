@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Corsi {%endblock title%}
+
+{%block content%}
+    <h1>Corsi che iniziano dopo il 01/05/2025</h1>
+    <ol>
+        {% for corso in corsi %}
+            <li>{{ corso.titolo }}</li>
+        {% endfor %}
+    </ol>
+{%endblock content%}

@@ -9,9 +9,10 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-import os
+import os, pymysql
 from pathlib import Path
 
+pymysql.install_as_MySQLdb()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'news',
     'voti',
     'eventi_scolastici',
+    'corsi_formazione',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +64,7 @@ TEMPLATES = [
         'DIRS': [os.path.join(BASE_DIR,'prima_app/templates'),
                  os.path.join(BASE_DIR,'seconda_app/templates'),
                  os.path.join(BASE_DIR,'news/templates'),
+                 os.path.join(BASE_DIR,'corsi_formazione/templates'),
                  os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -83,6 +86,12 @@ WSGI_APPLICATION = 'primo_progetto.wsgi.application'
 
 DATABASES = {
     'default': {
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'PanichiSimone$mydb',
+        #'USER': 'PanichiSimone',
+        #'PASSWORD': 'password123',
+        #'HOST': 'PanichiSimone.mysql.eu.pythonanywhere-services.com',
+        #'PORT': '3306',
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }

@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Dettagli corso {%endblock title%}
+
+{%block content%}
+    <h3>Dettagli corso</h1>
+        {% for corso in corsi %}
+            <h5>Titolo: {{ corso.titolo }}</h6>
+            <h6>Descrizione: {{ corso.descrizione }}</h6>
+            <h6>Data di inizio: {{ corso.data_inizio }}</h6>
+            <h6>Data di fine: {{ corso.data_fine }}</h6>
+            <h6>Posti disponibili: {{ corso.posti_disponibili }}</h6><br><br>
+        {% endfor %}
+{%endblock content%}
