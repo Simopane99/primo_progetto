@@ -6,7 +6,7 @@ app_name='corsi_formazione'
 
 urlpatterns= [
     path("", index_corsi, name="index_corsi"),
-    path("view_a_corsi/<int:pk>", view_a_corsi, name="view_a_corsi"),
+    path("view_a_corsi", view_a_corsi, name="view_a_corsi"),
     path("view_b_corsi", view_b_corsi, name="view_b_corsi"),
     path("corso/<int:pk>", corsoDetailView, name="corsoDetailView"),
     path("view_c_corsi", view_c_corsi, name="view_c_corsi"),

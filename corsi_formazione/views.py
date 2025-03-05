@@ -5,12 +5,12 @@ import datetime
 def index_corsi(request):
     return render(request,"index_corsi.html")
 
-def view_a_corsi(request, pk):
-    if(pk==None):
-        corsi=Corso.objects.all() 
+def view_a_corsi(request):
+    #if(pk==None):
+    corsi=Corso.objects.all() 
     
-    else:
-        corsi=Corso.objects.filter(corso__id=pk) 
+   # else:
+        #corsi=Corso.objects.filter(corso__id=pk) 
     corsi=corsi.order_by('data_inizio')
     return render(request, "view_a_corsi.html", context={
         'corsi':corsi
@@ -48,12 +48,12 @@ def view_e_corsi(request):
 
 def view_f_corsi(request):
     posti_totali=0
-    corsi=list(Corso.objects.all())
+    corsi=Corso.objects.all()
     corso_piu_posti=Corso.objects.order_by('posti_disponibili').first()
     corso_meno_posti=Corso.objects.order_by('-posti_disponibili').first()
     for corso in corsi:
-        for _,_,_,_,posti in corso:
-            posti_totali+=posti
+       
+        posti_totali+=corso.posti_disponibili
     return render(request, "view_f_corsi.html", context={
         'corso_piu_posti':corso_piu_posti,
         'corso_meno_posti':corso_meno_posti,

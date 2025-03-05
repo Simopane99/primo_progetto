@@ -5,7 +5,7 @@
 {%block content%}
     <h1>Benvenuto nel sistema di gestione dei corsi di formazione</h1>
     <ul>
-        <li><a href="{% url 'corsi_formazione:view_a_corsi' 1%}">Corsi ordinati per data di inizio</a></li>
+        <li><a href="{% url 'corsi_formazione:view_a_corsi'%}">Corsi ordinati per data di inizio</a></li>
         <li><a href="{% url 'corsi_formazione:view_b_corsi'%}">Lista dettagli</a></li>
         <li><a href="{% url 'corsi_formazione:corsoDetailView' 1%}">Dettaglio corso</a></li>
         <li><a href="{% url 'corsi_formazione:view_c_corsi'%}">Corsi che iniziano dopo il 01/05/2025</a></li>
