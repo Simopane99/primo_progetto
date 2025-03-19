@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+{%block title%} {{block.super}} | Lista contatti {%endblock title%}
+
+{%block content%}
+    <h3>Lista contatti</h3>
+    {% if len(contatti)>0 %}
+        <table>
+        {% for contatto in contatti %}
+            <tr><td>Nome: {{ contatto.nome }}</td><td> Cognome: {{ contatto.cognome }} </td><td>Email: {{ contatto.email }}</td><td> Contenuto: {{ contatto.contenuto }}</td></tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <h3>Non ci sono contatti!</h3>
+    {% endif %}
+{%endblock content%}
