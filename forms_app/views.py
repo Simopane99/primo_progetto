@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .forms import FormContatto
 from django.http import HttpResponse
 from .models import Contatto
+from django.shortcuts get_object_or_404,redirect
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
 
 def contatti(request):
     if request.method =="POST":
