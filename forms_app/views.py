@@ -45,3 +45,12 @@ def modifica_contatto(request,pk):
             return redirect('forms_app:lista-contatti')
     context={'form':form, 'contatto':contatto}
     return render(request, 'modifica_contatto.html', context)
+
+@staff_member_required(login_url"/accounts/login")
+def elimina_contatto(request,pk):
+    contatto = get_object_or_404(Contatto, id=pk)
+    if request.method =="POST":
+        contatto.delete()
+        return redirect('forms_app:lista-contatti')
+    context={'contatto':contatto}
+    return render(request, 'elimina_contatto.html', context)
