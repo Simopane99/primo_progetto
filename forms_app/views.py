@@ -32,3 +32,16 @@ def contatti(request):
 def lista_contatti(request):
     contatti=Contatto.objects.all()
     return render(request, "lista_contatti.html", context={ 'contatti': contatti})
+
+@login_required(login_url="/accounts/login")
+def modifica_contatto(request,pk):
+    contatto = get_object_or_404(Contatto, id=pk)
+    if request.method == "GET":
+        form = FormContatto(istance=contatto)
+    if request.method == "POST":
+        form = FormContatto(request.POST, istance=contatto)
+        if form.is_valid:
+            form.save()
+            return redirect('forms_app:lista-contatti')
+    context={'form':form, 'contatto':contatto}
+    return render(request, 'modifica_contatto.html', context)
