@@ -51,6 +51,6 @@ def elimina_contatto(request,pk):
     contatto = get_object_or_404(Contatto, id=pk)
     if request.method =="POST":
         contatto.delete()
-        return redirect('forms_app:lista-contatti')
+        return redirect('forms_app:lista_contatti')
     context={'contatto':contatto}
     return render(request, 'elimina_contatto.html', context)
